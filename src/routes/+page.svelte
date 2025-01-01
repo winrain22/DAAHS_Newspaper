@@ -5,10 +5,10 @@
 
 <!-- our mission banner -->
 <div
-    class="w-full flex justify-center bg-fixed h-[60vh] bg-no-repeat bg-cover bg-black/55 text-white"
+    class="w-full flex justify-center bg-fixed h-[60vh] bg-no-repeat bg-cover bg-black/75 text-white"
     style="background-image:url(/bg.png); background-blend-mode: darken; background-position-x: center; background-position-y: bottom;"
 >
-    <div class="w-full h-full text-center mt-6 p-2">
+    <div class="w-full h-full text-center mt-6 p-4">
         <h1 class="text-4xl">Our Mission</h1>
         <br />
         <p>
@@ -33,8 +33,8 @@
                 <Card.Title>Our Latest Issue</Card.Title>
                 <Card.Description>See what we have in store!</Card.Description>
             </div>
-            <div>
-                <Button variant="outline">Go to Archive</Button>
+            <div class="text-right">
+                <Button variant="outline" class="mb-1">Go to Archive</Button>
                 <Button>Read</Button>
             </div>
         </Card.Header>
@@ -48,9 +48,8 @@
                 <Card.Title>Daily Howl</Card.Title>
                 <Card.Description>See what we have in store!</Card.Description>
             </div>
-            <div>
-                <Button variant="outline">Go to Archive</Button>
-                <Button>Read</Button>
+            <div class="text-right">
+                <Button>Open</Button>
             </div>
         </Card.Header>
         <Card.Content>
