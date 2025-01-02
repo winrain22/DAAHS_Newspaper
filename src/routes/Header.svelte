@@ -46,7 +46,7 @@
                         {#each pages as page}
                             <a
                                 href={page.href}
-                                class="hover:text-anne-tan text-white transition-colors text-xl font-medium text-muted-foreground {activePageHref ===
+                                class="hover:text-anne-tan text-white transition-colors text-xl font-medium {activePageHref ===
                                 page.href
                                     ? 'underline'
                                     : ''}">{page.name}</a
