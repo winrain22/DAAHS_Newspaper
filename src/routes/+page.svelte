@@ -3,26 +3,14 @@
     import * as Card from "$lib/components/ui/card/index.js";
 </script>
 
-<!-- our mission banner -->
-<div
-    class="w-full flex justify-center bg-fixed h-[60vh] bg-no-repeat bg-cover bg-black/75 text-white"
-    style="background-image:url(/bg.png); background-blend-mode: darken; background-position-x: center; background-position-y: bottom;"
->
-    <div class="w-full h-full text-center mt-6 p-4">
-        <h1 class="text-4xl">Our Mission</h1>
-        <br />
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            diam nibh, pharetra nec velit a, finibus ultricies eros. Vestibulum
-            ante ex, volutpat quis maximus sit amet, porta et leo. Sed mattis,
-            sapien id euismod rhoncus, felis nunc maximus lorem, vitae suscipit
-            justo libero quis nunc. Fusce feugiat quam enim, eu blandit justo
-            bibendum interdum. Fusce id tellus efficitur, dignissim ipsum at,
-            pretium erat. Aenean velit dolor, pharetra eget elit quis, cursus
-            efficitur turpis. Mauris tempus mollis neque, vitae porta dolor
-            accumsan eu. Nullam eu nibh ex. Phasellus volutpat metus mauris.
-        </p>
-    </div>
+<style>
+    :global(body) {
+        background: url("/background.png");
+    }
+</style>
+
+<div class="h-screen flex justify-center items-center">
+    <img src="/guardianne-logo-big.png" alt="Guardianne Logo" class="max-h-full md:h-full" />
 </div>
 
 <!-- Latest issues & highlights -->

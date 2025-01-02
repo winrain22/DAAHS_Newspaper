@@ -16,6 +16,11 @@ const config: Config = {
 		},
 		extend: {
 			colors: {
+				anne: {
+					blue: "#1d366f",
+					white: "#ffffff",
+					tan: "#ffeedc"
+				},
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
 				ring: "hsl(var(--ring) / <alpha-value>)",

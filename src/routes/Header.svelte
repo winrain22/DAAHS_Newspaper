@@ -1,4 +1,5 @@
 <script lang="ts">
+    import VanishingHeader from "./VanishingHeader.svelte";
     import { page } from "$app/stores";
     import { Button, buttonVariants } from "$lib/components/ui/button";
     import Menu from "lucide-svelte/icons/menu";
@@ -15,54 +16,56 @@
     let activePageHref = $derived($page.url.pathname);
 </script>
 
-<header class="sticky top-0 p-4 border-b border-border bg-white">
-    <div class="container max-w-screen-2xl flex items-center justify-between">
-        <a href="/" class="text-xl font-bold"
-            ><img src="/logo.png" alt="The Guardianne" class="h-8" /></a
-        >
-        <Sheet.Root>
-            <Sheet.Trigger
-                class="md:hidden {buttonVariants({
-                    size: "icon",
-                })}"
+<VanishingHeader>
+    <header class="sticky top-0 p-4 border-b border-border bg-anne-blue">
+        <div class="container max-w-screen-2xl flex items-center justify-between">
+            <a href="/" class="text-xl font-bold"
+                ><img src="/white-logo.png" alt="The Guardianne" class="h-8" /></a
             >
-                <Menu />
-            </Sheet.Trigger>
-
-            <Sheet.Content>
-                <Sheet.Header>
-                    <Sheet.Title
-                        ><img
-                            src="/logo.png"
-                            alt="The Guardianne"
-                            class="h-8"
-                        /></Sheet.Title
-                    >
-                </Sheet.Header>
-                <div class="mt-3">
-                    {#each pages as page}
-                        <a
-                            href={page.href}
-                            class="hover:text-black transition-colors text-xl font-medium text-muted-foreground {activePageHref ===
-                            page.href
-                                ? 'underline text-black'
-                                : ''}">{page.name}</a
-                        >
-                        <br />
-                    {/each}
-                </div>
-            </Sheet.Content>
-        </Sheet.Root>
-        <div class="ml-2 gap-3 mt-2 hidden md:flex">
-            {#each pages as page}
-                <a
-                    href={page.href}
-                    class="hover:text-black transition-colors text-lg font-medium text-muted-foreground {activePageHref ===
-                    page.href
-                        ? 'underline text-black'
-                        : ''}">{page.name}</a
+            <Sheet.Root>
+                <Sheet.Trigger
+                    class="md:hidden {buttonVariants({
+                        size: "icon",
+                    })}"
                 >
-            {/each}
+                    <Menu />
+                </Sheet.Trigger>
+    
+                <Sheet.Content>
+                    <Sheet.Header>
+                        <Sheet.Title
+                            ><img
+                                src="/logo.png"
+                                alt="The Guardianne"
+                                class="h-8"
+                            /></Sheet.Title
+                        >
+                    </Sheet.Header>
+                    <div class="mt-3">
+                        {#each pages as page}
+                            <a
+                                href={page.href}
+                                class="hover:text-black transition-colors text-xl font-medium text-muted-foreground {activePageHref ===
+                                page.href
+                                    ? 'underline text-black'
+                                    : ''}">{page.name}</a
+                            >
+                            <br />
+                        {/each}
+                    </div>
+                </Sheet.Content>
+            </Sheet.Root>
+            <div class="ml-2 gap-3 mt-2 hidden md:flex">
+                {#each pages as page}
+                    <a
+                        href={page.href}
+                        class="text-white hover:text-anne-tan transition-colors font-medium text-muted-foreground {activePageHref ===
+                        page.href
+                            ? 'underline text-black'
+                            : ''}">{page.name}</a
+                    >
+                {/each}
+            </div>
         </div>
-    </div>
-</header>
+    </header>    
+</VanishingHeader>
