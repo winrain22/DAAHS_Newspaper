@@ -1,8 +1,8 @@
 <!-- our mission banner -->
 <div
-    class="w-full flex justify-center items-center h-[100vh] pl-5 pr-5"
+    class="w-full flex justify-center items-center flex-col md:flex-row h-[100vh] pl-5 pr-5"
 >
-    <div class="text-center p-4 pt-20 flex-1" style="place-items:center">
+    <div class="text-center p-4 pt-20 md:flex-1">
         <h1 class="text-4xl">Our Mission</h1>
         <br />
         <p>
@@ -18,7 +18,7 @@
         </p>
     </div>
 
-    <div class="flex-1">
+    <div class="md:flex-1">
         <img
             src="/temp-club.jpg"
             alt="Our Mission"

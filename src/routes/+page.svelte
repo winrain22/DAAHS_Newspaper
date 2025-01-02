@@ -3,12 +3,6 @@
     import * as Card from "$lib/components/ui/card/index.js";
 </script>
 
-<style>
-    :global(body) {
-        background: url("/background.png");
-    }
-</style>
-
 <div class="h-screen flex justify-center items-center">
     <img src="/guardianne-logo-big.png" alt="Guardianne Logo" class="max-h-full md:h-full" />
 </div>

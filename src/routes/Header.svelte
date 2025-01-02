@@ -26,16 +26,17 @@
                 <Sheet.Trigger
                     class="md:hidden {buttonVariants({
                         size: "icon",
+                        variant: "secondary"
                     })}"
                 >
                     <Menu />
                 </Sheet.Trigger>
     
-                <Sheet.Content>
+                <Sheet.Content class="bg-anne-blue border-anne-blue/30">
                     <Sheet.Header>
                         <Sheet.Title
                             ><img
-                                src="/logo.png"
+                                src="/white-logo.png"
                                 alt="The Guardianne"
                                 class="h-8"
                             /></Sheet.Title
@@ -45,9 +46,9 @@
                         {#each pages as page}
                             <a
                                 href={page.href}
-                                class="hover:text-black transition-colors text-xl font-medium text-muted-foreground {activePageHref ===
+                                class="hover:text-anne-tan text-white transition-colors text-xl font-medium text-muted-foreground {activePageHref ===
                                 page.href
-                                    ? 'underline text-black'
+                                    ? 'underline'
                                     : ''}">{page.name}</a
                             >
                             <br />
@@ -59,9 +60,9 @@
                 {#each pages as page}
                     <a
                         href={page.href}
-                        class="text-white hover:text-anne-tan transition-colors font-medium text-muted-foreground {activePageHref ===
+                        class="text-white hover:text-anne-tan transition-colors font-medium {activePageHref ===
                         page.href
-                            ? 'underline text-black'
+                            ? 'underline'
                             : ''}">{page.name}</a
                     >
                 {/each}
